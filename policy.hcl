@@ -1,5 +1,6 @@
 policy "azure" {
   title =  "Azure Security and Compliance pack"
+  doc = file("README.md")
   configuration {
     provider "azure" {
       version = ">= 0.2.4"
