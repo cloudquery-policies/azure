@@ -9,6 +9,7 @@ policy "cis_v1.3.0" {
 
   policy "1" {
     title = "Section 1"
+    doc = file("cis_v1.3.0/docs/1.md")
 
     check "1.1" {
       title = "1.1 Ensure that multi-factor authentication is enabled for all privileged users (Manual)"
@@ -159,6 +160,7 @@ policy "cis_v1.3.0" {
 
   policy "2" {
     title = "Section 2"
+    doc = file("cis_v1.3.0/docs/2.md")
 
     view "azure_security_policy_parameters" {
       title = "GCP Log Metric Filter and Alarm"
@@ -268,11 +270,13 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-3" {
     title = "Section 3"
+    doc = file("cis_v1.3.0/docs/3.md")
 
   }
 
   policy "azure-cis-section-4" {
     title = "Section 4"
+    doc = file("cis_v1.3.0/docs/4.md")
 
     check "4.1.1" {
       title = "4.1.1 Ensure that 'Auditing' is set to 'On' (Automated)"
@@ -388,11 +392,13 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-5" {
     title = "Section 5"
+    doc = file("cis_v1.3.0/docs/5.md")
 
   }
 
   policy "azure-cis-section-6" {
     title = "Section 6"
+    doc = file("cis_v1.3.0/docs/6.md")
 
     view "azure_nsg_rules" {
       title = "Azure network security groups rules with parsed ports"
@@ -440,6 +446,7 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-7" {
     title = "Section 7"
+    doc = file("cis_v1.3.0/docs/7.md")
 
     check "7.1" {
       title = "7.1 Ensure Virtual Machines are utilizing Managed Disks (Manual)"
@@ -498,6 +505,7 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-8" {
     title = "Section 8"
+    doc = file("cis_v1.3.0/docs/8.md")
 
     check "8.1" {
       title = "8.1 Ensure that the expiration date is set on all keys (Automated)"
@@ -533,6 +541,7 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-9" {
     title = "Section 9"
+    doc = file("cis_v1.3.0/docs/9.md")
 
     check "9.1" {
       title = "9.1 Ensure App Service Authentication is set on Azure App Service (Automated)"
