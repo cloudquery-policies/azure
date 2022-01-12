@@ -4,7 +4,7 @@ This CloudQuery policy implements the Azure CIS v1.3.0 benchmark guidelines.
 
 ## Overview
 
-See latest Azuer CIS guides on https://www.cisecurity.org/benchmark/azure/.
+See latest Azure CIS guides on https://www.cisecurity.org/benchmark/azure/.
 
 ## Running
 
