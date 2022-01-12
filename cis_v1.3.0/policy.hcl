@@ -9,7 +9,7 @@ policy "cis_v1.3.0" {
 
   policy "1" {
     title = "Section 1"
-    doc = file("cis_v1.3.0/docs/1.md")
+    doc   = file("cis_v1.3.0/docs/1.md")
 
     check "1.1" {
       title = "1.1 Ensure that multi-factor authentication is enabled for all privileged users (Manual)"
@@ -160,7 +160,7 @@ policy "cis_v1.3.0" {
 
   policy "2" {
     title = "Section 2"
-    doc = file("cis_v1.3.0/docs/2.md")
+    doc   = file("cis_v1.3.0/docs/2.md")
 
     view "azure_security_policy_parameters" {
       title = "GCP Log Metric Filter and Alarm"
@@ -252,7 +252,7 @@ policy "cis_v1.3.0" {
     }
 
     check "2.13" {
-      title         = "2.13 Ensure 'Additional email addresses' is configured with a security contact email (Automated)"
+      title = "2.13 Ensure 'Additional email addresses' is configured with a security contact email (Automated)"
       //email should be valid so if there is even not valid email it will pass
       expect_output = true
       query         = file("queries/security/security_email_configured.sql")
@@ -270,13 +270,13 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-3" {
     title = "Section 3"
-    doc = file("cis_v1.3.0/docs/3.md")
+    doc   = file("cis_v1.3.0/docs/3.md")
 
   }
 
   policy "azure-cis-section-4" {
     title = "Section 4"
-    doc = file("cis_v1.3.0/docs/4.md")
+    doc   = file("cis_v1.3.0/docs/4.md")
 
     check "4.1.1" {
       title = "4.1.1 Ensure that 'Auditing' is set to 'On' (Automated)"
@@ -392,13 +392,13 @@ policy "cis_v1.3.0" {
 
   policy "azure-cis-section-5" {
     title = "Section 5"
-    doc = file("cis_v1.3.0/docs/5.md")
+    doc   = file("cis_v1.3.0/docs/5.md")
 
   }
 
   policy "azure-cis-section-6" {
     title = "Section 6"
-    doc = file("cis_v1.3.0/docs/6.md")
+    doc   = file("cis_v1.3.0/docs/6.md")
 
     view "azure_nsg_rules" {
       title = "Azure network security groups rules with parsed ports"
@@ -408,63 +408,63 @@ policy "cis_v1.3.0" {
     check "6.1" {
       title = "6.1 Ensure that RDP access is restricted from the internet (Automated)"
       query = file("queries/network/rdp_access_permitted.sql")
-      doc = file("cis_v1.3.0/docs/6.1.md")
+      doc   = file("cis_v1.3.0/docs/6.1.md")
     }
 
 
     check "6.2" {
       title = "6.2 Ensure that SSH access is restricted from the internet (Automated)"
       query = file("queries/network/ssh_access_permitted.sql")
-      doc = file("cis_v1.3.0/docs/6.2.md")
+      doc   = file("cis_v1.3.0/docs/6.2.md")
     }
 
     check "6.3" {
       title = "6.3 Ensure no SQL Databases allow ingress 0.0.0.0/0 (ANY IP) (Automated)"
       //todo think about "other combinations which allows access to wider public IP ranges including Windows Azure IP ranges."
       query = file("queries/network/sql_database_allow_ingress.sql")
-      doc = file("cis_v1.3.0/docs/6.3.md")
+      doc   = file("cis_v1.3.0/docs/6.3.md")
     }
 
     check "6.4" {
       title = "6.4 Ensure that Network Security Group Flow Log retention period is 'greater than 90 days' (Automated)"
       query = file("queries/network/securtiy_group_flow_log_retention_less_than_90_days.sql")
-      doc = file("cis_v1.3.0/docs/6.4.md")
+      doc   = file("cis_v1.3.0/docs/6.4.md")
     }
 
     check "6.5" {
       title = "6.5 Ensure that Network Watcher is 'Enabled' (Manual)"
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/6.5.md")
+      doc   = file("cis_v1.3.0/docs/6.5.md")
     }
 
     check "6.6" {
       title = "6.6 Ensure that UDP Services are restricted from the Internet (Automated)"
       query = file("queries/network/udp_services_permitted.sql")
-      doc = file("cis_v1.3.0/docs/6.6.md")
+      doc   = file("cis_v1.3.0/docs/6.6.md")
     }
   }
 
   policy "azure-cis-section-7" {
     title = "Section 7"
-    doc = file("cis_v1.3.0/docs/7.md")
+    doc   = file("cis_v1.3.0/docs/7.md")
 
     check "7.1" {
       title = "7.1 Ensure Virtual Machines are utilizing Managed Disks (Manual)"
       query = file("queries/compute/vms_utilizing_managed_disks.sql")
-      doc = file("cis_v1.3.0/docs/7.1.md")
+      doc   = file("cis_v1.3.0/docs/7.1.md")
     }
 
     check "7.2" {
       title = "7.2 Ensure that 'OS and Data' disks are encrypted with CMK (Automated)"
       query = file("queries/compute/os_and_data_disks_encrypted_with_cmk.sql")
-      doc = file("cis_v1.3.0/docs/7.2.md")
+      doc   = file("cis_v1.3.0/docs/7.2.md")
     }
 
     check "7.3" {
       title = "7.3 Ensure that 'Unattached disks' are encrypted with CMK (Automated)"
       //todo maybe replace '%CustomerKey%' with 'EncryptionAtRestWithCustomerKey'
       query = file("queries/compute/unattached_disks_are_encrypted_with_cmk.sql")
-      doc = file("cis_v1.3.0/docs/7.3.md")
+      doc   = file("cis_v1.3.0/docs/7.3.md")
     }
 
     check "7.4" {
@@ -477,14 +477,14 @@ policy "cis_v1.3.0" {
       //      v.cq_id = r.virtual_machine_cq_id
       //    EOF
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/7.4.md")
+      doc   = file("cis_v1.3.0/docs/7.4.md")
     }
 
 
     check "7.5" {
       title = "7.5 Ensure that the latest OS Patches for all Virtual Machines are applied (Manual)"
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/7.5.md")
+      doc   = file("cis_v1.3.0/docs/7.5.md")
     }
 
 
@@ -493,84 +493,84 @@ policy "cis_v1.3.0" {
       //todo theoretically we can check if vm has security extensions but user also can have his own security extensions which we can't check
       //      EndpointSecurity || TrendMicroDSA* || Antimalware || EndpointProtection || SCWPAgent || PortalProtectExtension* || FileSecurity*
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/7.6.md")
+      doc   = file("cis_v1.3.0/docs/7.6.md")
     }
 
     check "7.7" {
       title = "7.7 Ensure that VHD's are encrypted (Manual)"
       query = file("queries/compute/vhds_not_encrypted.sql")
-      doc = file("cis_v1.3.0/docs/7.7.md")
+      doc   = file("cis_v1.3.0/docs/7.7.md")
     }
   }
 
   policy "azure-cis-section-8" {
     title = "Section 8"
-    doc = file("cis_v1.3.0/docs/8.md")
+    doc   = file("cis_v1.3.0/docs/8.md")
 
     check "8.1" {
       title = "8.1 Ensure that the expiration date is set on all keys (Automated)"
       query = file("queries/keyvault/keys_without_expiration_date.sql")
-      doc = file("cis_v1.3.0/docs/8.1.md")
+      doc   = file("cis_v1.3.0/docs/8.1.md")
     }
 
     check "8.2" {
       title = "8.2 Ensure that the expiration date is set on all Secrets (Automated)"
       query = file("queries/keyvault/secrets_without_expiration_date.sql")
-      doc = file("cis_v1.3.0/docs/8.2.md")
+      doc   = file("cis_v1.3.0/docs/8.2.md")
     }
 
     check "8.3" {
       title = "8.3 Ensure that Resource Locks are set for mission critical Azure resources (Manual)"
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/8.3.md")
+      doc   = file("cis_v1.3.0/docs/8.3.md")
     }
 
     check "8.4" {
       title = "8.4 Ensure the key vault is recoverable (Automated)"
       query = file("queries/keyvault/not_recoverable.sql")
-      doc = file("cis_v1.3.0/docs/8.4.md")
+      doc   = file("cis_v1.3.0/docs/8.4.md")
     }
 
     check "8.5" {
       title = "8.5 Enable role-based access control (RBAC) within Azure Kubernetes Services (Automated)"
       query = file("queries/keyvault/not_recoverable.sql")
-      doc = file("cis_v1.3.0/docs/8.5.md")
+      doc   = file("cis_v1.3.0/docs/8.5.md")
     }
   }
 
 
   policy "azure-cis-section-9" {
     title = "Section 9"
-    doc = file("cis_v1.3.0/docs/9.md")
+    doc   = file("cis_v1.3.0/docs/9.md")
 
     check "9.1" {
       title = "9.1 Ensure App Service Authentication is set on Azure App Service (Automated)"
       query = file("queries/web/app_auth_unset.sql")
-      doc = file("cis_v1.3.0/docs/9.1.md")
+      doc   = file("cis_v1.3.0/docs/9.1.md")
     }
 
     check "9.2" {
       title = "9.2 Ensure web app redirects all HTTP traffic to HTTPS in Azure App Service (Automated)"
       query = file("queries/web/app_allow_http.sql")
-      doc = file("cis_v1.3.0/docs/9.2.md")
+      doc   = file("cis_v1.3.0/docs/9.2.md")
     }
 
     check "9.3" {
       title = "9.3 Ensure web app is using the latest version of TLS encryption (Automated)"
       query = file("queries/web/app_using_old_tls.sql")
-      doc = file("cis_v1.3.0/docs/9.3.md")
+      doc   = file("cis_v1.3.0/docs/9.3.md")
     }
 
     check "9.4" {
       title = "9.4 Ensure the web app has 'Client Certificates (Incoming client certificates)' set to 'On' (Automated)"
       query = file("queries/web/app_client_cert_disabled.sql")
-      doc = file("cis_v1.3.0/docs/9.4.md")
+      doc   = file("cis_v1.3.0/docs/9.4.md")
     }
 
     check "9.5" {
       title = "9.5 Ensure that Register with Azure Active Directory is enabled on App Service (Automated)"
       query = file("queries/web/app_register_with_ad_disabled.sql")
-      doc = file("cis_v1.3.0/docs/9.5.md")
+      doc   = file("cis_v1.3.0/docs/9.5.md")
     }
 
     check "9.6" {
@@ -578,7 +578,7 @@ policy "cis_v1.3.0" {
       //we can check it but we need the latest php version. we can hardcode it here
       //todo we can show php version to ease check process
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/9.6.md")
+      doc   = file("cis_v1.3.0/docs/9.6.md")
     }
 
     check "9.7" {
@@ -586,7 +586,7 @@ policy "cis_v1.3.0" {
       //we can check it but we need the latest php version. we can hardcode it here
       //todo we can show version to ease check process
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/9.7.md")
+      doc   = file("cis_v1.3.0/docs/9.7.md")
     }
 
     check "9.8" {
@@ -594,7 +594,7 @@ policy "cis_v1.3.0" {
       //we can check it but we need the latest php version. we can hardcode it here
       //todo we can show version to ease check process
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/9.8.md")
+      doc   = file("cis_v1.3.0/docs/9.8.md")
     }
 
 
@@ -603,19 +603,19 @@ policy "cis_v1.3.0" {
       //we can check it but we need the latest php version. we can hardcode it here
       //todo we can show version to ease check process
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/9.9.md")
+      doc   = file("cis_v1.3.0/docs/9.9.md")
     }
 
     check "9.10" {
       title = "9.10 Ensure FTP deployments are disabled (Automated)"
       query = file("queries/web/app_ftp_deployment_enabled.sql")
-      doc = file("cis_v1.3.0/docs/9.10.md")
+      doc   = file("cis_v1.3.0/docs/9.10.md")
     }
 
     check "9.11" {
       title = "9.11 Ensure Azure Keyvaults are used to store secrets (Manual)"
       query = file("queries/manual.sql")
-      doc = file("cis_v1.3.0/docs/9.11.md")
+      doc   = file("cis_v1.3.0/docs/9.11.md")
     }
   }
 }

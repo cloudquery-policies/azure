@@ -8,6 +8,6 @@ See latest Azure CIS guides on https://www.cisecurity.org/benchmark/azure/.
 
 ## Running
 
-```
-cloudquery policy run azure azure/cis_v1.3.0
+```bash
+cloudquery policy run azure//cis_v1.3.0
 ```

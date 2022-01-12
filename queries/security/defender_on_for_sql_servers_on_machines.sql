@@ -1,4 +1,4 @@
 SELECT id, "name", pricing_properties_tier AS tier
 FROM azure_security_pricings asp
 WHERE "name" = 'SqlserverVirtualMachines'
-AND pricing_properties_tier = 'Standard';
+    AND pricing_properties_tier = 'Standard';
