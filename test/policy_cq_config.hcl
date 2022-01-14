@@ -19,7 +19,3 @@ provider "azure" {
   resources = [
   "*"]
 }
-
-policy "azure-policy-pack" {
-  source = "./policy.hcl"
-}
