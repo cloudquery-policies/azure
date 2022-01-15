@@ -1,13 +1,13 @@
-name: lint
+# DONT EDIT. This file is synced from https://github.com/cloudquery/.github/.github
+name: Lint
 on:
   push:
     branches:
       - main
   pull_request:
-  workflow_dispatch:
 
 jobs:
-  Lint-Policies:
+  LintHCL:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
@@ -19,8 +19,8 @@ jobs:
       - run: go install github.com/hashicorp/hcl/v2/cmd/hclfmt@latest
       - name: Lint-Policies
         run: find . -name "*.hcl"  -print0 | xargs -0 $(go env GOPATH)/bin/hclfmt --require-no-change
-
-  Lint-sql-queries:
+            
+  LintSQL:
     runs-on: ubuntu-latest
     steps:
       - uses: "actions/checkout@v2"
