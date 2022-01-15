@@ -35,20 +35,10 @@ jobs:
       - name: Check out code into the policy directory
         uses: actions/checkout@v2
 
-      - name: Cache CQ
-        id: cache-cq-binary
-        uses: actions/cache@v2
-        with:
-          path: cloudquery
-          key: ${{ runner.os }}-${{ hashFiles('cloudquery') }}
-
       - name: Download Cloudquery
-        if: steps.cache-cq-binary.cache-hit != 'true'
         run: |
           curl -L https://github.com/cloudquery/cloudquery/releases/latest/download/cloudquery_Linux_x86_64 -o cloudquery
           chmod a+x cloudquery
-        env:
-          OS: Linux
 
       - name: Build Schema
         run: |
