@@ -57,3 +57,4 @@ cloudquery policy run azure
 # Run specific policy
 cloudquery policy run azure//cis_v1.3.0
 ```
+
