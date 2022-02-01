@@ -17,6 +17,7 @@ CloudQuery extracts, transforms, and loads your cloud assets into normalized Pos
 ## Included Policies
 
 - CIS v1.3.0
+- HIPAA HITRUST 9.2
 
 ## Quick Start
 
