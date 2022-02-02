@@ -17,7 +17,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
     }
 
@@ -27,7 +27,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports should be closed on your virtual machines"
         description = "Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/security_groups_with_open_management_ports.sql")
       }
     }
 
@@ -37,7 +37,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A maximum of 3 owners should be designated for your subscription"
         description = "It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_more_than_3_owners.sql")
       }
     }
 
@@ -47,7 +47,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "There should be more than one owner assigned to your subscription"
         description = "It is recommended to designate more than one subscription owner in order to have administrator access redundancy."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_less_than_2_owners.sql")
       }
     }
 
@@ -57,7 +57,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "External accounts with owner permissions should be removed from your subscription"
         description = "External accounts with owner permissions should be removed from your subscription in order to prevent unmonitored access."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") # todo after msgraph resources added
       }
     }
 
@@ -67,7 +67,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Deprecated accounts with owner permissions should be removed from your subscription"
         description = "Deprecated accounts with owner permissions should be removed from your subscription. Deprecated accounts are accounts that have been blocked from signing in."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql")  # todo after msgraph resources added
       }
     }
 
@@ -77,13 +77,13 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit usage of custom RBAC rules"
         description = "Audit built-in roles such as 'Owner, Contributer, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling"
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/custom_roles.sql")
       }
 
       check "2" {
         title       = "Windows machines should meet requirements for 'Security Options_Accounts'"
         description = "Windows machines should have the specified Group Policy settings in the category 'Security Options_Accounts' for limiting local account use of blank passwords and guest account status. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") # todo
       }
     }
 
@@ -93,7 +93,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Role-Based Access Control (RBAC) should be used on Kubernetes Services"
         description = "To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Kubernetes Service Clusters and configure relevant authorization policies."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/aks_rbac_disabled.sql")
       }
     }
 
@@ -103,7 +103,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports should be closed on your virtual machines"
         description = "Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/security_groups_with_open_management_ports.sql")
       }
     }
 
@@ -113,7 +113,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A maximum of 3 owners should be designated for your subscription"
         description = "It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_more_than_3_owners.sql")
       }
     }
 
@@ -123,7 +123,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "There should be more than one owner assigned to your subscription"
         description = "It is recommended to designate more than one subscription owner in order to have administrator access redundancy."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_less_than_2_owners.sql")
       }
     }
 
@@ -133,7 +133,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Role-Based Access Control (RBAC) should be used on Kubernetes Services"
         description = "To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Kubernetes Service Clusters and configure relevant authorization policies."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/aks_rbac_disabled.sql")
       }
     }
 
@@ -143,7 +143,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A maximum of 3 owners should be designated for your subscription"
         description = "It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_more_than_3_owners.sql")
       }
     }
   }
@@ -187,7 +187,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
     }
 
@@ -227,7 +227,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
     }
 
@@ -267,7 +267,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
     }
   }
@@ -281,7 +281,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
     }
 
@@ -291,7 +291,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Management ports should be closed on your virtual machines"
         description = "Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/security_groups_with_open_management_ports.sql")
       }
     }
 
@@ -1039,7 +1039,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A maximum of 3 owners should be designated for your subscription"
         description = "It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_more_than_3_owners.sql")
       }
     }
 
@@ -1049,7 +1049,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "There should be more than one owner assigned to your subscription"
         description = "It is recommended to designate more than one subscription owner in order to have administrator access redundancy."
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/subscriptions_with_less_than_2_owners.sql")
       }
     }
 
@@ -1475,7 +1475,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Role-Based Access Control (RBAC) should be used on Kubernetes Services"
         description = "To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Kubernetes Service Clusters and configure relevant authorization policies."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/aks_rbac_disabled.sql")
       }
     }
 
@@ -1485,7 +1485,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit usage of custom RBAC rules"
         description = "Audit built-in roles such as 'Owner, Contributer, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling"
-        query       = file("queries/manual.sql")
+        query       = file("queries/authorization/custom_roles.sql")
       }
     }
 
@@ -1703,7 +1703,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Management ports of virtual machines should be protected with just-in-time network access control"
         description = "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machines_without_jit_network_access_policy.sql")
       }
 
       check "3" {
