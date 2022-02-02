@@ -6,4 +6,4 @@ WITH owners_in_sub AS (SELECT a.subscription_id, COUNT(*) AS owners
                        GROUP BY a.subscription_id)
 SELECT *
 FROM owners_in_sub
-WHERE owners > 3;
+WHERE owners < 2;
