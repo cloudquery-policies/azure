@@ -1525,7 +1525,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Deploy default Microsoft IaaSAntimalware extension for Windows Server"
         description = "This policy deploys a Microsoft IaaSAntimalware extension with a default configuration when a VM is not configured with the antimalware extension."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vmantimalwareextension_deploy.sql")
       }
 
       check "3" {
@@ -1537,7 +1537,7 @@ policy "hipaa_hitrust_v9.2" {
       check "4" {
         title       = "Microsoft Antimalware for Azure should be configured to automatically update protection signatures"
         description = "This policy audits any Windows virtual machine not configured with automatic update of Microsoft Antimalware protection signatures."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtualmachines_antimalwareautoupdate_auditifnotexists.sql")
       }
 
       check "5" {
@@ -1549,7 +1549,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "System updates should be installed on your machines"
         description = "Missing security system updates on your servers will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/asc_missingsystemupdates_audit.sql")
       }
     }
   }
