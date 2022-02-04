@@ -1965,7 +1965,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "SQL managed instances should use customer-managed keys to encrypt data at rest"
         description = "Implementing Transparent Data Encryption (TDE) with your own key provides you with increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties. This recommendation applies to organizations with a related compliance requirement."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/managed_instances_without_cmk_at_rest.sql")
       }
 
       check "3" {
@@ -2349,13 +2349,13 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A vulnerability assessment solution should be enabled on your virtual machines"
         description = "Audits virtual machines to detect whether they are running a supported vulnerability assessment solution. A core component of every cyber risk and security program is the identification and analysis of vulnerabilities. Azure Security Center's standard pricing tier includes vulnerability scanning for your virtual machines at no extra cost. Additionally, Security Center can automatically deploy this tool for you."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/machines_without_vulnerability_assessment_extension.sql")
       }
 
       check "2" {
         title       = "SQL databases should have vulnerability findings resolved"
         description = "Monitor vulnerability assessment scan results and recommendations for how to remediate database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #todo
       }
 
       check "3" {
@@ -2379,13 +2379,13 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Vulnerability assessment should be enabled on SQL Managed Instance"
         description = "Audit each SQL Managed Instance which doesn't have recurring vulnerability assessment scans enabled. Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/managed_instances_without_vulnerability_assessments.sql")
       }
 
       check "7" {
         title       = "Vulnerability assessment should be enabled on your SQL servers"
         description = "Audit Azure SQL servers which do not have recurring vulnerability assessment scans enabled. Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/servers_without_vulnerability_assessments.sql")
       }
 
       check "8" {
@@ -2401,7 +2401,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Vulnerability assessment should be enabled on SQL Managed Instance"
         description = "Audit each SQL Managed Instance which doesn't have recurring vulnerability assessment scans enabled. Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/managed_instances_without_vulnerability_assessments.sql")
       }
     }
 
@@ -2411,7 +2411,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "A vulnerability assessment solution should be enabled on your virtual machines"
         description = "Audits virtual machines to detect whether they are running a supported vulnerability assessment solution. A core component of every cyber risk and security program is the identification and analysis of vulnerabilities. Azure Security Center's standard pricing tier includes vulnerability scanning for your virtual machines at no extra cost. Additionally, Security Center can automatically deploy this tool for you."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/machines_without_vulnerability_assessment_extension.sql")
       }
     }
 
@@ -2481,7 +2481,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Vulnerability assessment should be enabled on SQL Managed Instance"
         description = "Audit each SQL Managed Instance which doesn't have recurring vulnerability assessment scans enabled. Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/managed_instances_without_vulnerability_assessments.sql")
       }
     }
   }
