@@ -2099,7 +2099,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Secure transfer to storage accounts should be enabled"
         description = "Audit requirement of Secure transfer in your storage account. Secure transfer is an option that forces your storage account to accept requests only from secure connections (HTTPS). Use of HTTPS ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking"
-        query       = file("queries/manual.sql")
+        query       = file("queries/storage/secure_transfer_to_storage_accounts_should_be_enabled.sql")
       }
     }
 
@@ -2119,7 +2119,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Only secure connections to your Azure Cache for Redis should be enabled"
         description = "Audit enabling of only connections via SSL to Azure Cache for Redis. Use of secure connections ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking"
-        query       = file("queries/manual.sql")
+        query       = file("queries/redis/only_secure_connections_to_your_azure_cache_for_redis_should_be_enabled.sql")
       }
     }
 
@@ -2129,7 +2129,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Enforce SSL connection should be enabled for PostgreSQL database servers"
         description = "Azure Database for PostgreSQL supports connecting your Azure Database for PostgreSQL server to client applications using Secure Sockets Layer (SSL). Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your database server."
-        query       = file("queries/manual.sql")
+        query       = file("queries/postgresql/enforce_ssl_connection_should_be_enabled_for_postgresql_database_servers.sql")
       }
     }
 
@@ -2139,7 +2139,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Enforce SSL connection should be enabled for MySQL database servers"
         description = "Azure Database for MySQL supports connecting your Azure Database for MySQL server to client applications using Secure Sockets Layer (SSL). Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application. This configuration enforces that SSL is always enabled for accessing your database server."
-        query       = file("queries/manual.sql")
+        query       = file("queries/mysql/enforce_ssl_connection_should_be_enabled_for_mysql_database_servers.sql")
       }
     }
 
@@ -2149,37 +2149,37 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "API App should only be accessible over HTTPS"
         description = "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/api_app_should_only_be_accessible_over_https.sql")
       }
 
       check "2" {
         title       = "Function App should only be accessible over HTTPS"
         description = "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/function_app_should_only_be_accessible_over_https.sql")
       }
 
       check "3" {
         title       = "Latest TLS version should be used in your API App"
         description = "Upgrade to the latest TLS version"
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/latest_tls_version_should_be_used_in_your_api_app.sql")
       }
 
       check "4" {
         title       = "Latest TLS version should be used in your Function App"
         description = "Upgrade to the latest TLS version"
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/latest_tls_version_should_be_used_in_your_function_app.sql")
       }
 
       check "5" {
         title       = "Latest TLS version should be used in your Web App"
         description = "Upgrade to the latest TLS version"
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/latest_tls_version_should_be_used_in_your_web_app.sql")
       }
 
       check "6" {
         title       = "Web Application should only be accessible over HTTPS"
         description = "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/web_application_should_only_be_accessible_over_https.sql")
       }
     }
   }
