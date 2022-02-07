@@ -1448,20 +1448,20 @@ policy "hipaa_hitrust_v9.2" {
     policy "1270_09ad1system_12_09_ad" {
       title = "The organization ensures proper logging is enabled in order to audit administrator activities; and reviews system administrator and operator logs on a regular basis."
 
-      check "1" {
+      check "activitylog_administrativeoperations_audit" {
         title       = "An activity log alert should exist for specific Administrative operations"
         description = "This policy audits specific Administrative operations with no activity log alerts configured."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/activitylog_administrativeoperations_audit.sql")
       }
     }
 
     policy "1271_09ad1system_1_09_ad" {
       title = "An intrusion detection system managed outside of the control of system and network administrators is used to monitor system and network administration activities for compliance."
 
-      check "1" {
+      check "activitylog_administrativeoperations_audit" {
         title       = "An activity log alert should exist for specific Administrative operations"
         description = "This policy audits specific Administrative operations with no activity log alerts configured."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/activitylog_administrativeoperations_audit.sql")
       }
     }
   }
