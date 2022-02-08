@@ -2355,7 +2355,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "SQL databases should have vulnerability findings resolved"
         description = "Monitor vulnerability assessment scan results and recommendations for how to remediate database vulnerabilities."
-        query       = file("queries/manual.sql") #todo
+        query       = file("queries/sql/sql_databases_with_unresolved_vulnerability_findings.sql")
       }
 
       check "3" {
@@ -2451,7 +2451,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "SQL databases should have vulnerability findings resolved"
         description = "Monitor vulnerability assessment scan results and recommendations for how to remediate database vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/sql_databases_with_unresolved_vulnerability_findings.sql")
       }
     }
 
