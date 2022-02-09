@@ -268,12 +268,6 @@ policy "cis_v1.3.0" {
 
   }
 
-  policy "azure-cis-section-3" {
-    title = "Section 3"
-    doc   = file("cis_v1.3.0/docs/3.md")
-
-  }
-
   policy "azure-cis-section-4" {
     title = "Section 4"
     doc   = file("cis_v1.3.0/docs/4.md")
@@ -388,12 +382,6 @@ policy "cis_v1.3.0" {
       query = file("queries/sql/sqlserver_tde_not_encrypted_with_cmek.sql")
       doc   = file("cis_v1.3.0/docs/4.5.md")
     }
-  }
-
-  policy "azure-cis-section-5" {
-    title = "Section 5"
-    doc   = file("cis_v1.3.0/docs/5.md")
-
   }
 
   policy "azure-cis-section-6" {
