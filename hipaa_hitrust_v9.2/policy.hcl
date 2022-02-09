@@ -1448,20 +1448,20 @@ policy "hipaa_hitrust_v9.2" {
     policy "1270_09ad1system_12_09_ad" {
       title = "The organization ensures proper logging is enabled in order to audit administrator activities; and reviews system administrator and operator logs on a regular basis."
 
-      check "1" {
+      check "activitylog_administrativeoperations_audit" {
         title       = "An activity log alert should exist for specific Administrative operations"
         description = "This policy audits specific Administrative operations with no activity log alerts configured."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/activitylog_administrativeoperations_audit.sql")
       }
     }
 
     policy "1271_09ad1system_1_09_ad" {
       title = "An intrusion detection system managed outside of the control of system and network administrators is used to monitor system and network administration activities for compliance."
 
-      check "1" {
+      check "activitylog_administrativeoperations_audit" {
         title       = "An activity log alert should exist for specific Administrative operations"
         description = "This policy audits specific Administrative operations with no activity log alerts configured."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/activitylog_administrativeoperations_audit.sql")
       }
     }
   }
@@ -1525,7 +1525,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Deploy default Microsoft IaaSAntimalware extension for Windows Server"
         description = "This policy deploys a Microsoft IaaSAntimalware extension with a default configuration when a VM is not configured with the antimalware extension."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vmantimalwareextension_deploy.sql")
       }
 
       check "3" {
@@ -1537,7 +1537,7 @@ policy "hipaa_hitrust_v9.2" {
       check "4" {
         title       = "Microsoft Antimalware for Azure should be configured to automatically update protection signatures"
         description = "This policy audits any Windows virtual machine not configured with automatic update of Microsoft Antimalware protection signatures."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtualmachines_antimalwareautoupdate_auditifnotexists.sql")
       }
 
       check "5" {
@@ -1549,7 +1549,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "System updates should be installed on your machines"
         description = "Missing security system updates on your servers will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/asc_missingsystemupdates_audit.sql")
       }
     }
   }

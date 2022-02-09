@@ -1,0 +1,9 @@
+SELECT
+	azure_compute_virtual_machines.vm_id AS vm_id,
+	azure_subscription_subscriptions.subscription_id,
+	azure_subscription_subscriptions.display_name AS subscription_name
+FROM
+	azure_compute_virtual_machines
+	JOIN azure_subscription_subscriptions ON azure_subscription_subscriptions.subscription_id = azure_compute_virtual_machines.subscription_id
+WHERE
+	windows_configuration_enable_automatic_updates IS DISTINCT FROM TRUE;
