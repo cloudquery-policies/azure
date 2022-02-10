@@ -1,4 +1,4 @@
-SELECT id, "name", enable_purge_protection
-FROM azure_keyvault_vaults akv
-WHERE enable_soft_delete != TRUE
-    OR enable_purge_protection != TRUE;
+SELECT id, "name", enable_purge_protection, enable_soft_delete
+FROM azure_keyvault_vaults
+WHERE enable_soft_delete IS NOT TRUE
+  OR enable_purge_protection IS NOT TRUE;

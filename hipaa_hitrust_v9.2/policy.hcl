@@ -2495,7 +2495,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit virtual machines without disaster recovery configured"
         description = "Audit virtual machines which do not have disaster recovery configured. To learn more about disaster recovery, visit https://aka.ms/asr-doc."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/audit_virtual_machines_without_disaster_recovery_configured.sql")
       }
     }
 
@@ -2505,13 +2505,13 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Azure Key Vault Managed HSM should have purge protection enabled"
         description = "Malicious deletion of an Azure Key Vault Managed HSM can lead to permanent data loss. A malicious insider in your organization can potentially delete and purge Azure Key Vault Managed HSM. Purge protection protects you from insider attacks by enforcing a mandatory retention period for soft deleted Azure Key Vault Managed HSM. No one inside your organization or Microsoft will be able to purge your Azure Key Vault Managed HSM during the soft delete retention period."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/azure_key_vault_managed_hsm_should_have_purge_protection_enabled.sql")
       }
 
       check "2" {
         title       = "Key vaults should have purge protection enabled"
         description = "Malicious deletion of a key vault can lead to permanent data loss. A malicious insider in your organization can potentially delete and purge key vaults. Purge protection protects you from insider attacks by enforcing a mandatory retention period for soft deleted key vaults. No one inside your organization or Microsoft will be able to purge your key vaults during the soft delete retention period."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/not_recoverable.sql")
       }
     }
 
@@ -2531,7 +2531,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit virtual machines without disaster recovery configured"
         description = "Audit virtual machines which do not have disaster recovery configured. To learn more about disaster recovery, visit https://aka.ms/asr-doc."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/audit_virtual_machines_without_disaster_recovery_configured.sql")
       }
     }
   }
