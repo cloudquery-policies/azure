@@ -5,4 +5,4 @@ SELECT
 FROM azure_sql_servers s
     LEFT JOIN azure_sql_databases asd ON
         s.cq_id = asd.server_cq_id
-WHERE asd.transparent_data_encryption -> 'properties' ->> 'status' != 'Enabled';
+WHERE (asd.transparent_data_encryption -> 'properties' ->> 'status') is distinct from 'Enabled';

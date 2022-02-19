@@ -345,7 +345,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
 
       check "2" {
@@ -393,13 +393,13 @@ policy "hipaa_hitrust_v9.2" {
       check "9" {
         title       = "Storage Accounts should use a virtual network service endpoint"
         description = "This policy audits any Storage Account not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/strorage/accounts_with_no_service_endpoint_associated.sql")
       }
 
       check "10" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "11" {
@@ -415,7 +415,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
 
       check "2" {
@@ -463,13 +463,13 @@ policy "hipaa_hitrust_v9.2" {
       check "9" {
         title       = "Storage Accounts should use a virtual network service endpoint"
         description = "This policy audits any Storage Account not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/strorage/accounts_with_no_service_endpoint_associated.sql")
       }
 
       check "10" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "11" {
@@ -485,7 +485,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
 
       check "1" {
@@ -539,13 +539,13 @@ policy "hipaa_hitrust_v9.2" {
       check "9" {
         title       = "Storage Accounts should use a virtual network service endpoint"
         description = "This policy audits any Storage Account not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/strorage/accounts_with_no_service_endpoint_associated.sql")
       }
 
       check "10" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "11" {
@@ -631,7 +631,7 @@ policy "hipaa_hitrust_v9.2" {
       check "12" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "13" {
@@ -719,7 +719,7 @@ policy "hipaa_hitrust_v9.2" {
       check "12" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "13" {
@@ -807,7 +807,7 @@ policy "hipaa_hitrust_v9.2" {
       check "12" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "13" {
@@ -895,7 +895,7 @@ policy "hipaa_hitrust_v9.2" {
       check "12" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "13" {
@@ -983,7 +983,7 @@ policy "hipaa_hitrust_v9.2" {
       check "12" {
         title       = "Subnets should be associated with a Network Security Group"
         description = "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/subnets_without_nsg_associated.sql")
       }
 
       check "13" {
@@ -1187,7 +1187,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Azure Data Lake Store should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/datalake/datalake_storage_accounts_with_disabled_logging.sql")
       }
 
       check "2" {
@@ -1233,7 +1233,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Virtual Machine Scale Sets should be enabled"
         description = "It is recommended to enable Logs so that activity trail can be recreated when investigations are required in the event of an incident or a compromise."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/virtual_machine_scale_sets_without_logs.sql")
       }
     }
 
@@ -1275,7 +1275,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in App Services should be enabled"
         description = "Audit enabling of resource logs on the app. This enables you to recreate activity trails for investigation purposes if a security incident occurs or your network is compromised."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/apps_with_logging_disabled.sql")
       }
     }
 
@@ -1337,7 +1337,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Virtual machines should have the Log Analytics extension installed"
         description = "This policy audits any Windows/Linux virtual machines if the Log Analytics extension is not installed."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/machines_without_log_analytics_agent.sql")
       }
     }
 
@@ -1347,7 +1347,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "The Log Analytics extension should be installed on Virtual Machine Scale Sets"
         description = "This policy audits any Windows/Linux Virtual Machine Scale Sets if the Log Analytics extension is not installed."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/scale_sets_without_log_analytics_agent.sql")
       }
     }
 
@@ -1397,7 +1397,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Virtual machines should have the Log Analytics extension installed"
         description = "This policy audits any Windows/Linux virtual machines if the Log Analytics extension is not installed."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/machines_without_log_analytics_agent.sql")
       }
     }
 
@@ -1407,7 +1407,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "The Log Analytics extension should be installed on Virtual Machine Scale Sets"
         description = "This policy audits any Windows/Linux Virtual Machine Scale Sets if the Log Analytics extension is not installed."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/scale_sets_without_log_analytics_agent.sql")
       }
     }
 
@@ -1495,7 +1495,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Windows machines should meet requirements for 'User Rights Assignment'"
         description = "Windows machines should have the specified Group Policy settings in the category 'User Rights Assignment' for allowing log on locally, RDP, access from the network, and many other user activities. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/rdp_access_permitted.sql")
       }
     }
 
@@ -1795,7 +1795,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Storage accounts should restrict network access"
         description = "Network access to storage accounts should be restricted. Configure network rules so only applications from allowed networks can access the storage account. To allow connections from specific internet or on-premises clients, access can be granted to traffic from specific Azure virtual networks or to public internet IP address ranges"
-        query       = file("queries/manual.sql")
+        query       = file("queries/storage/accounts_with_not_restricted_asscess.sql")
       }
     }
 
@@ -1805,7 +1805,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Storage Accounts should use a virtual network service endpoint"
         description = "This policy audits any Storage Account not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/strorage/accounts_with_no_service_endpoint_associated.sql")
       }
     }
 
@@ -1815,7 +1815,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
     }
 
@@ -1825,7 +1825,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
     }
 
@@ -1835,7 +1835,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
     }
 
@@ -1845,7 +1845,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Container Registry should use a virtual network service endpoint"
         description = "This policy audits any Container Registry not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/container/containers_without_virtual_service_endpoint.sql")
       }
     }
   }
@@ -1859,7 +1859,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Network traffic data collection agent should be installed on Windows virtual machines"
         description = "Security Center uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines to enable advanced network protection features such as traffic visualization on the network map, network hardening recommendations and specific network threats."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/windows_machines_without_data_collection_agent.sql")
       }
 
       check "2" {
@@ -1875,7 +1875,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Network traffic data collection agent should be installed on Linux virtual machines"
         description = "Security Center uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines to enable advanced network protection features such as traffic visualization on the network map, network hardening recommendations and specific network threats."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/linux_machines_without_data_collection_agent.sql")
       }
     }
 
@@ -1895,7 +1895,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Network traffic data collection agent should be installed on Linux virtual machines"
         description = "Security Center uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines to enable advanced network protection features such as traffic visualization on the network map, network hardening recommendations and specific network threats."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/linux_machines_without_data_collection_agent.sql")
       }
     }
 
@@ -1915,7 +1915,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "[Preview]: Network traffic data collection agent should be installed on Windows virtual machines"
         description = "Security Center uses the Microsoft Dependency agent to collect network traffic data from your Azure virtual machines to enable advanced network protection features such as traffic visualization on the network map, network hardening recommendations and specific network threats."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/windows_machines_without_data_collection_agent.sql")
       }
     }
 
@@ -1939,7 +1939,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Transparent Data Encryption on SQL databases should be enabled"
         description = "Transparent data encryption should be enabled to protect data-at-rest and meet compliance requirements"
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/data_encryption_off.sql")
       }
     }
 
@@ -2361,19 +2361,19 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "Vulnerabilities in container security configurations should be remediated"
         description = "Audit vulnerabilities in security configuration on machines with Docker installed and display as recommendations in Azure Security Center."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #manual
       }
 
       check "4" {
         title       = "Vulnerabilities in security configuration on your machines should be remediated"
         description = "Servers which do not satisfy the configured baseline will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #manual
       }
 
       check "5" {
         title       = "Vulnerabilities in security configuration on your virtual machine scale sets should be remediated"
         description = "Audit the OS vulnerabilities on your virtual machine scale sets to protect them from attacks."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #manual
       }
 
       check "6" {
@@ -2421,7 +2421,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Vulnerabilities in security configuration on your machines should be remediated"
         description = "Servers which do not satisfy the configured baseline will be monitored by Azure Security Center as recommendations"
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #manual
       }
     }
 
@@ -2431,7 +2431,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Vulnerabilities in security configuration on your virtual machine scale sets should be remediated"
         description = "Audit the OS vulnerabilities on your virtual machine scale sets to protect them from attacks."
-        query       = file("queries/manual.sql")
+        query       = file("queries/manual.sql") #manual
       }
     }
 
