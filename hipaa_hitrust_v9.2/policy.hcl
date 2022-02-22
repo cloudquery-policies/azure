@@ -387,7 +387,7 @@ policy "hipaa_hitrust_v9.2" {
       check "8" {
         title       = "SQL Server should use a virtual network service endpoint"
         description = "This policy audits any SQL Server not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/sql_servers_with_no_service_endpoint.sql")
       }
 
       check "9" {
@@ -405,7 +405,7 @@ policy "hipaa_hitrust_v9.2" {
       check "11" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
     }
 
@@ -475,7 +475,7 @@ policy "hipaa_hitrust_v9.2" {
       check "11" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
     }
 
@@ -551,7 +551,7 @@ policy "hipaa_hitrust_v9.2" {
       check "11" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
     }
   }
@@ -637,7 +637,7 @@ policy "hipaa_hitrust_v9.2" {
       check "13" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
 
       check "14" {
@@ -725,7 +725,7 @@ policy "hipaa_hitrust_v9.2" {
       check "13" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
 
       check "14" {
@@ -813,7 +813,7 @@ policy "hipaa_hitrust_v9.2" {
       check "13" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
 
       check "14" {
@@ -901,7 +901,7 @@ policy "hipaa_hitrust_v9.2" {
       check "13" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
 
       check "14" {
@@ -989,7 +989,7 @@ policy "hipaa_hitrust_v9.2" {
       check "13" {
         title       = "Virtual machines should be connected to an approved virtual network"
         description = "This policy audits any virtual machine connected to a virtual network that is not approved."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_without_approved_networks.sql")
       }
 
       check "14" {
@@ -1249,7 +1249,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Resource logs in Event Hub should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/eventhub/namespaces_without_logging.sql")
       }
     }
 
@@ -1307,13 +1307,13 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Resource logs in Azure Key Vault Managed HSM should be enabled"
         description = "To recreate activity trails for investigation purposes when a security incident occurs or when your network is compromised, you may want to audit by enabling resource logs on Managed HSMs. Please follow the instructions here: https://docs.microsoft.com/azure/key-vault/managed-hsm/logging."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/hsms_without_logging.sql")
       }
 
       check "3" {
         title       = "Resource logs in Key Vault should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/vaults_without_logging.sql")
       }
     }
   }
@@ -1865,7 +1865,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Virtual machines should be migrated to new Azure Resource Manager resources"
         description = "Use new Azure Resource Manager for your virtual machines to provide security enhancements such as: stronger access control (RBAC), better auditing, Azure Resource Manager based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication and support for tags and resource groups for easier security management"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/vms_no_resource_manager.sql")
       }
     }
 
@@ -1885,7 +1885,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Network Watcher should be enabled"
         description = "Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end to end network level view. It is required to have a network watcher resource group to be created in every region where a virtual network is present. An alert is enabled if a network watcher resource group is not available in a particular region."
-        query       = file("queries/manual.sql")
+        query       = file("queries/account/locations_without_network_watchers.sql")
       }
     }
 
@@ -1905,7 +1905,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Network Watcher should be enabled"
         description = "Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end to end network level view. It is required to have a network watcher resource group to be created in every region where a virtual network is present. An alert is enabled if a network watcher resource group is not available in a particular region."
-        query       = file("queries/manual.sql")
+        query       = file("queries/account/locations_without_network_watchers.sql")
       }
     }
 
@@ -1925,7 +1925,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Network Watcher should be enabled"
         description = "Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end to end network level view. It is required to have a network watcher resource group to be created in every region where a virtual network is present. An alert is enabled if a network watcher resource group is not available in a particular region."
-        query       = file("queries/manual.sql")
+        query       = file("queries/account/locations_without_network_watchers.sql")
       }
     }
   }
@@ -1959,7 +1959,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Require encryption on Data Lake Store accounts"
         description = "This policy ensures encryption is enabled on all Data Lake Store accounts"
-        query       = file("queries/manual.sql")
+        query       = file("queries/datalake/not_encrypted_storage_accounts.sql")
       }
 
       check "2" {
@@ -1971,7 +1971,7 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "SQL servers should use customer-managed keys to encrypt data at rest"
         description = "Implementing Transparent Data Encryption (TDE) with your own key provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties. This recommendation applies to organizations with a related compliance requirement."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/sqlserver_tde_not_encrypted_with_cmek.sql")
       }
     }
   }
