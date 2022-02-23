@@ -1203,7 +1203,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Logic Apps should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/logic/app_workflow_logging_enabled.sql")
       }
     }
 
