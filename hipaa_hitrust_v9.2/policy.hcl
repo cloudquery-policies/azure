@@ -351,7 +351,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "App Service should use a virtual network service endpoint"
         description = "This policy audits any App Service not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/virtualnetworkserviceendpoint_appservice_auditifnotexists.sql")
       }
 
       check "3" {
@@ -421,7 +421,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "App Service should use a virtual network service endpoint"
         description = "This policy audits any App Service not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/virtualnetworkserviceendpoint_appservice_auditifnotexists.sql")
       }
 
       check "3" {
@@ -491,7 +491,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "App Service should use a virtual network service endpoint"
         description = "This policy audits any App Service not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/virtualnetworkserviceendpoint_appservice_auditifnotexists.sql")
       }
 
       check "2" {
@@ -1301,7 +1301,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Auditing on SQL server should be enabled"
         description = "Auditing on your SQL Server should be enabled to track database activities across all databases on the server and save them in an audit log."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/sqlserverauditing_audit.sql")
       }
 
       check "2" {
@@ -1357,7 +1357,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit Windows machines on which the Log Analytics agent is not connected as expected"
         description = "Requires that prerequisites are deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol. Machines are non-compliant if the agent is not installed, or if it is installed but the COM object AgentConfigManager.MgmtSvcCfg returns that it is registered to a workspace other than the ID specified in the policy parameter."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/guestconfiguration_windowsloganalyticsagentconnection_aine.sql.sql")
       }
     }
 
@@ -1377,7 +1377,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Auto provisioning of the Log Analytics agent should be enabled on your subscription"
         description = "To monitor for security vulnerabilities and threats, Azure Security Center collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/asc_automatic_provisioning_log_analytics_monitoring_agent.sql.sql")
       }
     }
 
@@ -1417,7 +1417,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Audit Windows machines on which the Log Analytics agent is not connected as expected"
         description = "Requires that prerequisites are deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol. Machines are non-compliant if the agent is not installed, or if it is installed but the COM object AgentConfigManager.MgmtSvcCfg returns that it is registered to a workspace other than the ID specified in the policy parameter."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/guestconfiguration_windowsloganalyticsagentconnection_aine.sql.sql")
       }
     }
 
@@ -1437,7 +1437,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Auto provisioning of the Log Analytics agent should be enabled on your subscription"
         description = "To monitor for security vulnerabilities and threats, Azure Security Center collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/asc_automatic_provisioning_log_analytics_monitoring_agent.sql.sql")
       }
     }
   }
@@ -1697,7 +1697,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "All network ports should be restricted on network security groups associated to your virtual machine"
         description = "Azure Security Center has identified some of your network security groups' inbound rules to be too permissive. Inbound rules should not allow access from 'Any' or 'Internet' ranges. This can potentially enable attackers to target your resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/asc_unprotectedendpoints_audit.sql")
       }
 
       check "2" {
@@ -1739,7 +1739,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "App Service should use a virtual network service endpoint"
         description = "This policy audits any App Service not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/virtualnetworkserviceendpoint_appservice_auditifnotexists.sql")
       }
 
       check "2" {

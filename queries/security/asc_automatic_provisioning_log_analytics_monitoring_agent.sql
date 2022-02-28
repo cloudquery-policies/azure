@@ -1,0 +1,9 @@
+SELECT
+	azure_security_auto_provisioning_settings.cq_id,
+	azure_subscription_subscriptions.display_name AS subscription_name,
+	azure_subscription_subscriptions.id AS subscription_id
+FROM
+	azure_security_auto_provisioning_settings
+	RIGHT JOIN azure_subscription_subscriptions ON azure_security_auto_provisioning_settings.subscription_id = azure_subscription_subscriptions.subscription_id
+WHERE
+	auto_provision IS DISTINCT FROM 'AutoProvisionOn';

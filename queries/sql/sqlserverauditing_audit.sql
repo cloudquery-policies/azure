@@ -1,0 +1,12 @@
+SELECT
+	azure_sql_servers.cq_id,
+	azure_subscription_subscriptions.display_name AS subscription_name,
+	azure_subscription_subscriptions.id AS subscription_id
+FROM
+	azure_sql_server_db_blob_auditing_policies,
+	azure_sql_servers,
+	azure_subscription_subscriptions
+WHERE
+	azure_sql_server_db_blob_auditing_policies.server_cq_id = azure_sql_servers.cq_id
+	AND azure_subscription_subscriptions.subscription_id = azure_sql_servers.subscription_id
+	AND azure_sql_server_db_blob_auditing_policies.state = 'Disabled';
