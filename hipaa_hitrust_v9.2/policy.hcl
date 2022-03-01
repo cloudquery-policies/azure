@@ -157,7 +157,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with owner permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_owner_permissions_on_your_subscription.sql")
       }
     }
 
@@ -167,7 +167,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled accounts with write permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_accounts_with_write_permissions_on_your_subscription.sql")
       }
     }
 
@@ -177,7 +177,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with read permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_read_permissions_on_your_subscription.sql")
       }
     }
 
@@ -197,7 +197,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with owner permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_owner_permissions_on_your_subscription.sql")
       }
     }
 
@@ -207,7 +207,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled accounts with write permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_accounts_with_write_permissions_on_your_subscription.sql")
       }
     }
 
@@ -217,7 +217,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with read permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_read_permissions_on_your_subscription.sql")
       }
     }
 
@@ -237,7 +237,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with owner permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_owner_permissions_on_your_subscription.sql")
       }
     }
 
@@ -247,7 +247,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled accounts with write permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_accounts_with_write_permissions_on_your_subscription.sql")
       }
     }
 
@@ -257,7 +257,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with read permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_read_permissions_on_your_subscription.sql")
       }
     }
 
@@ -357,7 +357,7 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "Cosmos DB should use a virtual network service endpoint"
         description = "This policy audits any Cosmos DB not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/cosmosdb/cosmos_db_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "4" {
@@ -375,7 +375,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -427,7 +427,7 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "Cosmos DB should use a virtual network service endpoint"
         description = "This policy audits any Cosmos DB not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/cosmosdb/cosmos_db_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "4" {
@@ -445,7 +445,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -497,7 +497,7 @@ policy "hipaa_hitrust_v9.2" {
       check "2" {
         title       = "Cosmos DB should use a virtual network service endpoint"
         description = "This policy audits any Cosmos DB not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/cosmosdb/cosmos_db_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "3" {
@@ -521,7 +521,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -595,7 +595,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -683,7 +683,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -771,7 +771,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -859,7 +859,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -947,7 +947,7 @@ policy "hipaa_hitrust_v9.2" {
       check "6" {
         title       = "Internet-facing virtual machines should be protected with network security groups"
         description = "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/internet-facing_virtual_machines_should_be_protected_with_network_security_groups.sql")
       }
 
       check "7" {
@@ -1009,7 +1009,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with owner permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_owner_permissions_on_your_subscription.sql")
       }
     }
 
@@ -1019,7 +1019,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled accounts with write permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_accounts_with_write_permissions_on_your_subscription.sql")
       }
     }
 
@@ -1029,7 +1029,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "MFA should be enabled on accounts with read permissions on your subscription"
         description = "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources."
-        query       = file("queries/manual.sql")
+        query       = file("queries/security/mfa_should_be_enabled_on_accounts_with_read_permissions_on_your_subscription.sql")
       }
     }
 
@@ -1327,7 +1327,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Azure Monitor should collect activity logs from all regions"
         description = "This policy audits the Azure Monitor log profile which does not export activities from all Azure supported regions including global."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/azure_monitor_should_collect_activity_logs_from_all_regions.sql")
       }
     }
 
@@ -1367,7 +1367,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'"
         description = "This policy ensures that a log profile collects logs for categories 'write,' 'delete,' and 'action'"
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/azure_monitor_log_profile_should_collect_logs_for_categories_write_delete_and_action.sql")
       }
     }
 
@@ -1387,7 +1387,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Azure Monitor should collect activity logs from all regions"
         description = "This policy audits the Azure Monitor log profile which does not export activities from all Azure supported regions including global."
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/azure_monitor_should_collect_activity_logs_from_all_regions.sql")
       }
     }
 
@@ -1427,7 +1427,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'"
         description = "This policy ensures that a log profile collects logs for categories 'write,' 'delete,' and 'action'"
-        query       = file("queries/manual.sql")
+        query       = file("queries/monitor/azure_monitor_log_profile_should_collect_logs_for_categories_write_delete_and_action.sql")
       }
     }
 
@@ -1775,7 +1775,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Cosmos DB should use a virtual network service endpoint"
         description = "This policy audits any Cosmos DB not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/cosmosdb/cosmos_db_should_use_a_virtual_network_service_endpoint.sql")
       }
     }
 
