@@ -57,7 +57,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "External accounts with owner permissions should be removed from your subscription"
         description = "External accounts with owner permissions should be removed from your subscription in order to prevent unmonitored access."
-        query       = file("queries/manual.sql") # todo after msgraph resources added
+        query       = file("queries/security/external_accounts_with_owner_permissions_should_be_removed_from_your_subscription.sql")
       }
     }
 
@@ -67,7 +67,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Deprecated accounts with owner permissions should be removed from your subscription"
         description = "Deprecated accounts with owner permissions should be removed from your subscription. Deprecated accounts are accounts that have been blocked from signing in."
-        query       = file("queries/manual.sql")  # todo after msgraph resources added
+        query       = file("queries/security/deprecated_accounts_with_owner_permissions_should_be_removed_from_your_subscription.sql")
       }
     }
 
@@ -369,7 +369,7 @@ policy "hipaa_hitrust_v9.2" {
       check "5" {
         title       = "Gateway subnets should not be configured with a network security group"
         description = "This policy denies if a gateway subnet is configured with a network security group. Assigning a network security group to a gateway subnet will cause the gateway to stop functioning."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/gateway_subnets_should_not_be_configured_with_a_network_security_group.sql")
       }
 
       check "6" {
@@ -1223,7 +1223,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Batch accounts should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/batch/resource_logs_in_batch_accounts_should_be_enabled.sql")
       }
     }
 
@@ -1243,7 +1243,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Azure Stream Analytics should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/streamanalytics/resource_logs_in_azure_stream_analytics_should_be_enabled.sql")
       }
 
       check "2" {
@@ -1259,13 +1259,13 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Resource logs in Search services should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/search/resource_logs_in_search_services_should_be_enabled.sql")
       }
 
       check "2" {
         title       = "Resource logs in Service Bus should be enabled"
         description = "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised"
-        query       = file("queries/manual.sql")
+        query       = file("queries/servicebus/resource_logs_in_service_bus_should_be_enabled.sql")
       }
     }
 
@@ -1531,7 +1531,7 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "Endpoint protection solution should be installed on virtual machine scale sets"
         description = "Audit the existence and health of an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities."
-        query       = file("queries/manual.sql")
+        query       = file("queries/compute/endpoint_protection_solution_should_be_installed_on_virtual_machine_scale_sets.sql")
       }
 
       check "4" {
