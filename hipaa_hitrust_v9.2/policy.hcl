@@ -363,7 +363,7 @@ policy "hipaa_hitrust_v9.2" {
       check "4" {
         title       = "Event Hub should use a virtual network service endpoint"
         description = "This policy audits any Event Hub not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/eventhub/event_hub_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "5" {
@@ -433,7 +433,7 @@ policy "hipaa_hitrust_v9.2" {
       check "4" {
         title       = "Event Hub should use a virtual network service endpoint"
         description = "This policy audits any Event Hub not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/eventhub/event_hub_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "5" {
@@ -509,7 +509,7 @@ policy "hipaa_hitrust_v9.2" {
       check "4" {
         title       = "Event Hub should use a virtual network service endpoint"
         description = "This policy audits any Event Hub not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/eventhub/event_hub_should_use_a_virtual_network_service_endpoint.sql")
       }
 
       check "5" {
@@ -1563,7 +1563,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Long-term geo-redundant backup should be enabled for Azure SQL Databases"
         description = "This policy audits any Azure SQL Database with long-term geo-redundant backup not enabled."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/long-term_geo-redundant_backup_should_be_enabled_for_azure_sql_databases.sql")
       }
     }
 
@@ -1613,7 +1613,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Long-term geo-redundant backup should be enabled for Azure SQL Databases"
         description = "This policy audits any Azure SQL Database with long-term geo-redundant backup not enabled."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/long-term_geo-redundant_backup_should_be_enabled_for_azure_sql_databases.sql")
       }
     }
 
@@ -1765,7 +1765,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Event Hub should use a virtual network service endpoint"
         description = "This policy audits any Event Hub not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/eventhub/event_hub_should_use_a_virtual_network_service_endpoint.sql")
       }
     }
 
