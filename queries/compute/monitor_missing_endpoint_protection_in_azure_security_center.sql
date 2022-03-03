@@ -1,0 +1,11 @@
+SELECT vm.id
+FROM
+  azure_compute_virtual_machines vm
+  LEFT OUTER JOIN azure_security_assessments a
+  ON a.name = '83f577bd-a1b6-b7e1-0891-12ca19d1e6df' AND starts_with(a.id, vm.id || '/') 
+WHERE
+  a.name IS NULL
+  OR (
+    a.code IS DISTINCT FROM 'NotApplicable'
+    AND a.code IS DISTINCT FROM 'Healthy'
+  );
