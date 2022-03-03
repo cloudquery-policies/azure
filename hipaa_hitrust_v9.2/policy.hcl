@@ -503,7 +503,7 @@ policy "hipaa_hitrust_v9.2" {
       check "3" {
         title       = "Deploy network watcher when virtual networks are created"
         description = "This policy creates a network watcher resource in regions with virtual networks. You need to ensure existence of a resource group named networkWatcherRG, which will be used to deploy network watcher instances."
-        query       = file("queries/manual.sql")
+        query       = file("queries/network/networkwatcher_deploy.sql")
       }
 
       check "4" {
