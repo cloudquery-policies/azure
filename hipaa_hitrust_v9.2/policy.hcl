@@ -301,7 +301,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for Web Applications"
         description = "Remote debugging requires inbound ports to be opened on a web application. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_web_applications.sql")
       }
     }
 
@@ -311,7 +311,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for Function Apps"
         description = "Remote debugging requires inbound ports to be opened on function apps. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_function_apps.sql")
       }
     }
 
@@ -321,7 +321,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for API Apps"
         description = "Remote debugging requires inbound ports to be opened on API apps. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_api_apps.sql")
       }
     }
 
@@ -1985,7 +1985,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Ensure WEB app has 'Client Certificates (Incoming client certificates)' set to 'On'"
         description = "Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/app_client_cert_disabled.sql")
       }
     }
 
@@ -1995,7 +1995,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "CORS should not allow every resource to access your Web Applications"
         description = "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your web application. Allow only required domains to interact with your web app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/cors_should_not_allow_every_resource_to_access_your_web_applications.sql")
       }
     }
 
@@ -2005,7 +2005,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "CORS should not allow every resource to access your Function Apps"
         description = "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your Function app. Allow only required domains to interact with your Function app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/cors_should_not_allow_every_resource_to_access_your_function_apps.sql")
       }
     }
 
@@ -2015,7 +2015,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "CORS should not allow every resource to access your API App"
         description = "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your API app. Allow only required domains to interact with your API app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/cors_should_not_allow_every_resource_to_access_your_api_app.sql")
       }
     }
 
@@ -2025,7 +2025,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for Web Applications"
         description = "Remote debugging requires inbound ports to be opened on a web application. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_web_applications.sql")
       }
     }
 
@@ -2035,7 +2035,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for Function Apps"
         description = "Remote debugging requires inbound ports to be opened on function apps. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_function_apps.sql")
       }
     }
 
@@ -2045,7 +2045,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for API Apps"
         description = "Remote debugging requires inbound ports to be opened on API apps. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_api_apps.sql")
       }
     }
 
@@ -2055,7 +2055,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Ensure WEB app has 'Client Certificates (Incoming client certificates)' set to 'On'"
         description = "Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/app_client_cert_disabled.sql")
       }
     }
 
@@ -2065,7 +2065,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "CORS should not allow every resource to access your Web Applications"
         description = "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your web application. Allow only required domains to interact with your web app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/cors_should_not_allow_every_resource_to_access_your_web_applications.sql")
       }
     }
 
@@ -2075,7 +2075,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "CORS should not allow every resource to access your Function Apps"
         description = "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your Function app. Allow only required domains to interact with your Function app."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/cors_should_not_allow_every_resource_to_access_your_function_apps.sql")
       }
     }
 
@@ -2085,7 +2085,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Remote debugging should be turned off for Function Apps"
         description = "Remote debugging requires inbound ports to be opened on function apps. Remote debugging should be turned off."
-        query       = file("queries/manual.sql")
+        query       = file("queries/web/remote_debugging_should_be_turned_off_for_function_apps.sql")
       }
     }
   }
