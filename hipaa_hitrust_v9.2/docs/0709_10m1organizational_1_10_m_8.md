@@ -1,0 +1,1 @@
+# Windows machines should have the specified Group Policy settings in the category 'Security Options_Microsoft Network Server' for disabling SMB v1 server. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol.

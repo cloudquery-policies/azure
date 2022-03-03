@@ -1,0 +1,1 @@
+# Windows machines should have the specified Group Policy settings in the category 'System Audit Policies_Detailed Tracking' for auditing DPAPI, process creation/termination, RPC events, and PNP activity. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol.

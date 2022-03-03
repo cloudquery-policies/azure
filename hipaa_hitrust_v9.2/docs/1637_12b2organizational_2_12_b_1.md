@@ -1,0 +1,1 @@
+# Windows machines should have the specified Group Policy settings in the category 'Security Options_Recovery console' for allowing floppy copy and access to all drives and folders. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol.
