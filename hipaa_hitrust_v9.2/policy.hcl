@@ -381,7 +381,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title = "Key Vault should use a virtual network service endpoint"
         doc   = file("hipaa_hitrust_v9.2/docs/0805_01m1organizational_12_01_m_7.md")
-        query = file("queries/manual.sql")
+        query = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -451,7 +451,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title = "Key Vault should use a virtual network service endpoint"
         doc   = file("hipaa_hitrust_v9.2/docs/0806_01m2organizational_12356_01_m_7.md")
-        query = file("queries/manual.sql")
+        query = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -521,7 +521,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title = "Key Vault should use a virtual network service endpoint"
         doc   = file("hipaa_hitrust_v9.2/docs/0894_01m2organizational_7_01_m_7.md")
-        query = file("queries/manual.sql")
+        query = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -1573,7 +1573,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1617_09l1organizational_23_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1583,7 +1583,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1618_09l1organizational_45_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1593,7 +1593,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1619_09l1organizational_7_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1623,7 +1623,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1622_09l2organizational_23_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1633,7 +1633,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1623_09l2organizational_4_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1643,7 +1643,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1624_09l3organizational_12_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1663,7 +1663,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1626_09l3organizational_5_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1673,7 +1673,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1627_09l3organizational_6_09_l_1.md")
-        query = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1785,7 +1785,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Key Vault should use a virtual network service endpoint"
         doc   = file("hipaa_hitrust_v9.2/docs/0865_09m2organizational_13_09_m_1.md")
-        query = file("queries/manual.sql")
+        query = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
     }
 
