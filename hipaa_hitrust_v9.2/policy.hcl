@@ -381,7 +381,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title       = "Key Vault should use a virtual network service endpoint"
         description = "This policy audits any Key Vault not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -451,7 +451,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title       = "Key Vault should use a virtual network service endpoint"
         description = "This policy audits any Key Vault not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -527,7 +527,7 @@ policy "hipaa_hitrust_v9.2" {
       check "7" {
         title       = "Key Vault should use a virtual network service endpoint"
         description = "This policy audits any Key Vault not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
 
       check "8" {
@@ -1573,7 +1573,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         description = "Azure Database for MySQL allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1583,7 +1583,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         description = "Azure Database for PostgreSQL allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1593,7 +1593,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         description = "Azure Database for MariaDB allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1623,7 +1623,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         description = "Azure Database for MySQL allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1633,7 +1633,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         description = "Azure Database for PostgreSQL allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1643,7 +1643,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         description = "Azure Database for MariaDB allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1663,7 +1663,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         description = "Azure Database for PostgreSQL allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1673,7 +1673,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         description = "Azure Database for MariaDB allows you to choose the redundancy option for your database server. It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery option in case of a region failure. Configuring geo-redundant storage for backup is only allowed during server create."
-        query       = file("queries/manual.sql")
+        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1785,7 +1785,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title       = "Key Vault should use a virtual network service endpoint"
         description = "This policy audits any Key Vault not configured to use a virtual network service endpoint."
-        query       = file("queries/manual.sql")
+        query       = file("queries/keyvault/vaults_with_no_service_endpoint.sql")
       }
     }
 
