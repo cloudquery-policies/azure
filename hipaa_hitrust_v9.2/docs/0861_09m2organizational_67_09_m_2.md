@@ -1,0 +1,1 @@
+# Windows machines should have the specified Group Policy settings in the category 'Security Options_Network Access' for including access for anonymous users, local accounts, and remote access to the registry. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol.

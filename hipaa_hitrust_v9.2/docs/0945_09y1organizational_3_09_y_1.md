@@ -1,0 +1,1 @@
+# Requires that prerequisites are deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol. Machines are non-compliant if the machine Trusted Root certificate store (Cert:\\LocalMachine\\Root) does not contain one or more of the certificates listed by the policy parameter.

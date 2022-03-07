@@ -13,6 +13,6 @@ policy "azure" {
   }
 
   policy "hipaa_hitrust_v9.2" {
-    source = file("hipaa_hitrust_v9/policy.hcl")
+    source = file("hipaa_hitrust_v9.2/policy.hcl")
   }
 }

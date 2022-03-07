@@ -1,0 +1,1 @@
+# Windows machines should have the specified Group Policy settings in the category 'Security Options_User Account Control' for mode for admins, behavior of elevation prompt, and virtualizing file and registry write failures. This policy requires that the Guest Configuration prerequisites have been deployed to the policy assignment scope. For details, visit https://aka.ms/gcpol.
