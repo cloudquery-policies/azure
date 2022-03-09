@@ -1573,7 +1573,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1617_09l1organizational_23_09_l_1.md")
-        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1583,7 +1583,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1618_09l1organizational_45_09_l_1.md")
-        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1593,7 +1593,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1619_09l1organizational_7_09_l_1.md")
-        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1623,7 +1623,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MySQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1622_09l2organizational_23_09_l_1.md")
-        query       = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/mysql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1633,7 +1633,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1623_09l2organizational_4_09_l_1.md")
-        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1643,7 +1643,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1624_09l3organizational_12_09_l_1.md")
-        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1663,7 +1663,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for PostgreSQL"
         doc   = file("hipaa_hitrust_v9.2/docs/1626_09l3organizational_5_09_l_1.md")
-        query       = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/postgresql_servers_without_geo_redundant_backups.sql")
       }
     }
 
@@ -1673,7 +1673,7 @@ policy "hipaa_hitrust_v9.2" {
       check "1" {
         title = "Geo-redundant backup should be enabled for Azure Database for MariaDB"
         doc   = file("hipaa_hitrust_v9.2/docs/1627_09l3organizational_6_09_l_1.md")
-        query       = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
+        query = file("queries/sql/mariadb_servers_without_geo_redundant_backups.sql")
       }
     }
 

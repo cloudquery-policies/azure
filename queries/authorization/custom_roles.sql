@@ -1,18 +1,6 @@
-select
-    -- Required Columns
-    kc.id            as resource,
-    case
-        when enable_rbac then ''ok''
-        else ''alarm''
-        end          as status,
-    case
-        when enable_rbac then name || '' role based access control enabled.''
-        else name || '' role based access control disabled.''
-        end          as reason,
-    -- Additional Dimensions
-    enable_rbac,
-    resource_group,
-    sub.display_name as subscription
-from azure_kubernetes_cluster kc,
-     azure_subscription sub
-where sub.subscription_id = kc.subscription_id;
+SELECT mc.id
+FROM azure_container_managed_clusters mc,
+     azure_subscription_subscriptions sub
+WHERE
+  sub.subscription_id = mc.subscription_id
+  AND enable_rbac IS NOT TRUE;
