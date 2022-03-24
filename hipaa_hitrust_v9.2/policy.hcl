@@ -24,6 +24,11 @@ policy "hipaa_hitrust_v9.2" {
     policy "1143_01c1system_123_01_c" {
       title = "Privileges are formally authorized and controlled, allocated to users on a need-to-use and event-by-event basis for their functional role (e.g., user or administrator), and documented for each system product/element."
 
+      view "azure_nsg_rules" {
+        title = "Azure network security groups rules with parsed ports"
+        query = file("queries/network/nsg_rules_ports.sql")
+      }
+
       check "1" {
         title = "Management ports should be closed on your virtual machines"
         doc   = file("hipaa_hitrust_v9.2/docs/1143_01c1system_123_01_c_1.md")
@@ -99,6 +104,11 @@ policy "hipaa_hitrust_v9.2" {
 
     policy "1150_01c2system_10_01_c" {
       title = "The access control system for the system components storing, processing or transmitting covered information is set with a default \"deny-all\" setting."
+
+      view "azure_nsg_rules" {
+        title = "Azure network security groups rules with parsed ports"
+        query = file("queries/network/nsg_rules_ports.sql")
+      }
 
       check "1" {
         title = "Management ports should be closed on your virtual machines"
@@ -287,6 +297,11 @@ policy "hipaa_hitrust_v9.2" {
 
     policy "1193_01l2organizational_13_01_l" {
       title = "Controls for the access to diagnostic and configuration ports include the use of a key lock and the implementation of supporting procedures to control physical access to the port."
+
+      view "azure_nsg_rules" {
+        title = "Azure network security groups rules with parsed ports"
+        query = file("queries/network/nsg_rules_ports.sql")
+      }
 
       check "1" {
         title = "Management ports should be closed on your virtual machines"
