@@ -1507,6 +1507,11 @@ policy "hipaa_hitrust_v9.2" {
     policy "1232_09c3organizational_12_09_c" {
       title = "Access for individuals responsible for administering  access controls is limited to the minimum necessary based upon each user's role and responsibilities and these individuals cannot access audit functions related to these controls."
 
+      view "azure_nsg_rules" {
+        title = "Azure network security groups rules with parsed ports"
+        query = file("queries/network/nsg_rules_ports.sql")
+      }
+
       check "1" {
         title = "Windows machines should meet requirements for 'User Rights Assignment'"
         doc   = file("hipaa_hitrust_v9.2/docs/1232_09c3organizational_12_09_c_1.md")
