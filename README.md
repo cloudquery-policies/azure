@@ -1,3 +1,7 @@
+------------
+This moved to https://github.com/cloudquery/cq-provider-azure/tree/main/policies
+------------
+
 # Azure Security & Compliance CloudQuery policy pack
 
 Official Azure security & compliance policy pack for CloudQuery.
